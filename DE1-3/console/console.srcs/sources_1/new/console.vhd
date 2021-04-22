@@ -7,6 +7,7 @@ entity console is
         reset   : in  std_logic;
         -- Traffic lights (RGB LEDs) for two directions
         line_one_o : out std_logic_vector(3 - 1 downto 0)
+        
     );
 end console;
 
