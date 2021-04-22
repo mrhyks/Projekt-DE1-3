@@ -7,28 +7,33 @@ end entity tb_distance;
 architecture testbench of tb_distance is
     -- Local constants
     --signal distance: integer range 0 to 32;
-    constant c_CLK_100MHZ_PERIOD : time := 10 ns;
+    constant c_MAX               : natural := 8;
+    constant c_CLK_100MHZ_PERIOD : time := 10 ms;
 
     --Local signals
     signal s_clk_100MHz : std_logic;
     signal s_reset      : std_logic;
     signal s_wheel      : std_logic_vector(1 downto 0);
     signal s_sonda      : std_logic;
-    signal s_distance   : integer range 0 to 32;
-    signal s_rotations  : integer range 0 to 32;
+    signal s_distance   : integer range 0 to 32:=0;
+    signal s_rotations  : integer range 0 to 32:=0;
+    signal s_bin_rotations:std_logic_vector(15 downto 0);
 
 begin
     -- Connecting testbench signals with tlc entity (Unit Under Test)
     uut_distance : entity work.distance
         generic map(
-            distance=> s_distance,
-            rotations=>s_rotations
-        )
+            g_MAX => c_MAX
+        )   -- Note that there is NO comma or semicolon between
+            -- generic map section and port map section
         port map(
             clk     => s_clk_100MHz,
             reset   => s_reset,
             wheel   => s_wheel,
-            sonda   => s_sonda
+            sonda   => s_sonda,
+            o_distance=>s_distance,
+            o_rotations=>s_rotations,
+            o_bin_rotations=>s_bin_rotations
         );
 
     --------------------------------------------------------------------
@@ -36,7 +41,7 @@ begin
     --------------------------------------------------------------------
     p_clk_gen : process
     begin
-        while now < 10000 ns loop   -- 10 usec of simulation
+        while now < 10000 ms loop         
             s_clk_100MHz <= '0';
             wait for c_CLK_100MHZ_PERIOD / 2;
             s_clk_100MHz <= '1';
@@ -64,7 +69,7 @@ begin
     p_stimulus : process
     begin
         s_wheel<="01";
-        s_sonda<='0';wait for 100ms;
+        s_sonda<='0';wait for 95ms;
         s_sonda<='1';wait for 100ms;
         s_sonda<='0';wait for 100ms;
         s_sonda<='1';wait for 100ms;
@@ -78,7 +83,19 @@ begin
         s_sonda<='1';wait for 100ms;
         s_sonda<='0';wait for 100ms;
         
-        
+        s_wheel<="11";
+        s_sonda<='1';wait for 150ms;
+        s_sonda<='0';wait for 150ms;
+        s_sonda<='1';wait for 150ms;
+        s_sonda<='0';wait for 150ms;
+        s_sonda<='1';wait for 150ms;
+        s_sonda<='0';wait for 150ms;
+        s_sonda<='1';wait for 150ms;
+        s_sonda<='0';wait for 150ms;
+        s_sonda<='1';wait for 150ms;
+        s_sonda<='0';wait for 150ms;
+        s_sonda<='1';wait for 150ms;
+        s_sonda<='0';wait for 150ms;
         wait;
     end process p_stimulus;
 
