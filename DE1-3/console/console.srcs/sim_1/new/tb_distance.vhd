@@ -18,25 +18,14 @@ architecture testbench of tb_distance is
     signal s_reset        : std_logic;
     signal s_wheel        : std_logic_vector(1 downto 0);
     signal s_sonda        : std_logic;
-    signal s_distance     : integer range 0 to 32:=0;
-    signal s_rotations    : integer range 0 to 32:=0;
-    signal s_bin_rotations: unsigned(15 downto 0);
     signal s_bin_distance : unsigned(15 downto 0);
 begin
-    -- Connecting testbench signals with tlc entity (Unit Under Test)
     uut_distance : entity work.distance
-        generic map(
-            g_MAX => c_MAX
-        )   -- Note that there is NO comma or semicolon between
-            -- generic map section and port map section
         port map(
             clk     => s_clk_100MHz,
             reset   => s_reset,
             wheel   => s_wheel,
             sonda   => s_sonda,
-            o_distance=>s_distance,
-            o_rotations=>s_rotations,
-            o_bin_rotations=>s_bin_rotations,
             o_bin_distance=>s_bin_distance
         );
 
