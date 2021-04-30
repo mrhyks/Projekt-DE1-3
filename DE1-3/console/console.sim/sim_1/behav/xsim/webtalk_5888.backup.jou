@@ -2,11 +2,11 @@
 # Webtalk v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Fri Apr 30 16:44:49 2021
-# Process ID: 10196
+# Start of session at: Fri Apr 30 17:20:10 2021
+# Process ID: 5888
 # Current directory: C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.sim/sim_1/behav/xsim
-# Command line: wbtcv.exe -mode batch -source C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.sim/sim_1/behav/xsim/xsim.dir/tb_average_behav/webtalk/xsim_webtalk.tcl -notrace
+# Command line: wbtcv.exe -mode batch -source C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.sim/sim_1/behav/xsim/xsim.dir/tb_buttons_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.sim/sim_1/behav/xsim/webtalk.log
 # Journal file: C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.sim/sim_1/behav/xsim\webtalk.jou
 #-----------------------------------------------------------
-source C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.sim/sim_1/behav/xsim/xsim.dir/tb_average_behav/webtalk/xsim_webtalk.tcl -notrace
+source C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.sim/sim_1/behav/xsim/xsim.dir/tb_buttons_behav/webtalk/xsim_webtalk.tcl -notrace

@@ -1,8 +1,6 @@
 library ieee;
 use IEEE.STD_LOGIC_1164.ALL;
 use ieee.numeric_std.all;
-use IEEE.STD_LOGIC_UNSIGNED.ALL;
-use ieee.std_logic_arith;
 
 entity tb_distance is
 end entity tb_distance;
@@ -18,15 +16,15 @@ architecture testbench of tb_distance is
     signal s_reset        : std_logic;
     signal s_wheel        : std_logic_vector(1 downto 0);
     signal s_sonda        : std_logic;
-    signal s_bin_distance : unsigned(15 downto 0);
+    signal s_distance     : unsigned(31 downto 0);
 begin
     uut_distance : entity work.distance
         port map(
             clk     => s_clk_100MHz,
             reset   => s_reset,
-            wheel   => s_wheel,
-            sonda   => s_sonda,
-            o_bin_distance=>s_bin_distance
+            i_wheel   => s_wheel,
+            i_sonda   => s_sonda,
+            o_distance=>s_distance
         );
 
     --------------------------------------------------------------------

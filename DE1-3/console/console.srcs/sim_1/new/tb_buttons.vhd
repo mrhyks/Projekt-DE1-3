@@ -48,8 +48,8 @@ begin
             s_BTN0 <= '1';
             s_BTN1 <= '0'; wait for 250 ms;
             
-            s_BTN0 <= '0'; wait for 240 ms;
-            s_BTN0 <= '1'; wait for 10 ms;
+            s_BTN0 <= '0'; wait for 250 ms;
+            s_BTN0 <= '1'; 
             s_BTN1 <= '1'; wait for 2000 ms;
             
             s_BTN0 <= '0';

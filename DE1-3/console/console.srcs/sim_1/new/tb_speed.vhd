@@ -1,8 +1,6 @@
 library ieee;
 use IEEE.STD_LOGIC_1164.ALL;
 use ieee.numeric_std.all;
-use IEEE.STD_LOGIC_UNSIGNED.ALL;
-use ieee.std_logic_arith;
 
 entity tb_speed is
 --  Port ( );
@@ -20,21 +18,15 @@ architecture Behavioral of tb_speed is
     signal s_reset        : std_logic;
     signal s_wheel        : std_logic_vector(1 downto 0);
     signal s_sonda        : std_logic;
-    signal s_bin_speed: unsigned(15 downto 0);
-    signal s_bin_time : unsigned(15 downto 0);
+    signal s_speed        : unsigned(31 downto 0);
 begin
      uut_distance : entity work.speed
-        generic map(
-            g_MAX => c_MAX
-        )   -- Note that there is NO comma or semicolon between
-            -- generic map section and port map section
         port map(
             clk     => s_clk_100MHz,
             reset   => s_reset,
-            wheel   => s_wheel,
-            sonda   => s_sonda,
-            o_bin_speed=>s_bin_speed,
-            o_bin_time=>s_bin_time
+            i_wheel => s_wheel,
+            i_sonda => s_sonda,
+            o_speed => s_speed
         );
 
     --------------------------------------------------------------------
