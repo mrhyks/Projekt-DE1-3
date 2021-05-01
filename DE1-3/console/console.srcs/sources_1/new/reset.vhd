@@ -1,5 +1,5 @@
 -----------------------------------------------------------------
--- This is design for reset.vhd
+-- This is module for reset.vhd
 -----------------------------------------------------------------
 
 library IEEE;
@@ -7,8 +7,8 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity reset is
     Port (
-        i_button1_reset : in  std_logic;    -- Reset input from mode.vhd
-        i_button2_reset : in  std_logic;    -- Reset input from wheel.vhd
+        i_button0_reset : in  std_logic;    -- Reset input from mode.vhd
+        i_button1_reset : in  std_logic;    -- Reset input from wheel.vhd
         
         o_reset         : out std_logic     -- Reset output
     );
@@ -22,9 +22,9 @@ begin
     -- When reset signals from mode.vhd and wheel.vhd are '1'
     -- it will initiate reset for distance and average speed
     ------------------------------------------------------------
-    p_reset : process(i_button1_reset,i_button2_reset)
+    p_reset : process(i_button0_reset,i_button1_reset)
     begin
-        if ((rising_edge(i_button1_reset) and i_button2_reset = '1') or (rising_edge(i_button2_reset) and i_button1_reset = '1')) then
+        if ((rising_edge(i_button0_reset) and i_button1_reset = '1') or (rising_edge(i_button1_reset) and i_button0_reset = '1')) then
             o_reset <= '1';
         else 
             o_reset <= '0';

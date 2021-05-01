@@ -10,22 +10,22 @@ end tb_mode;
 
 architecture Behavioral of tb_mode is
     -- Local constant
-    constant c_CLK_100MHZ_PERIOD : time := 500 ms;
+    constant c_CLK_100MHZ_PERIOD : time := 10 ms;
     
     -- Local signals
     signal s_clk_100MHz          : std_logic;
+    signal s_button0             : std_logic;
     signal s_button1             : std_logic;
-    signal s_button2             : std_logic;
     signal s_mode                : std_logic_vector(1 downto 0);
-    signal s_button1_reset       : std_logic;
+    signal s_button0_reset       : std_logic;
 begin
     uut_mode : entity work.mode
         port map(
             clk              => s_clk_100MHz,
+            i_button0        => s_button0,
             i_button1        => s_button1,
-            i_button2        => s_button2,
             o_mode           => s_mode,
-            o_button1_reset  => s_button1_reset
+            o_button0_reset  => s_button0_reset
         );
         
         ----------------------------------------------------------------------
@@ -50,43 +50,43 @@ begin
             -- Report a note at the begining of stimulus process
             report "Stimulus process started" severity note;
             
-            s_button1 <= '0'; 
-            s_button2 <= '0'; wait for 250 ms;
-            s_button1 <= '1'; wait for 100 ms;
-            s_button2 <= '1'; wait for 2500 ms;
-            
+            s_button0 <= '0'; 
             s_button1 <= '0'; wait for 250 ms;
-            s_button2 <= '0'; wait for 100 ms;
-            s_button1 <= '1'; wait for 100 ms;
+            s_button0 <= '1'; wait for 100 ms;
+            s_button1 <= '1'; wait for 2500 ms;
             
-            s_button1 <= '0'; wait for 250 ms;
-            s_button1 <= '1'; wait for 100 ms;
+            s_button0 <= '0'; wait for 250 ms;
+            s_button1 <= '0'; wait for 100 ms;
+            s_button0 <= '1'; wait for 100 ms;
             
-            s_button1 <= '0'; wait for 250 ms;
-            s_button1 <= '1'; wait for 100 ms;
+            s_button0 <= '0'; wait for 250 ms;
+            s_button0 <= '1'; wait for 100 ms;
             
-            s_button1 <= '0'; wait for 250 ms;
-            s_button1 <= '1'; wait for 100 ms;
-            s_button2 <= '1'; wait for 1000 ms;
+            s_button0 <= '0'; wait for 250 ms;
+            s_button0 <= '1'; wait for 100 ms;
             
-            s_button2 <= '0';
-            s_button1 <= '0'; wait for 250 ms;
-            s_button1 <= '1'; wait for 100 ms;
+            s_button0 <= '0'; wait for 250 ms;
+            s_button0 <= '1'; wait for 100 ms;
+            s_button1 <= '1'; wait for 1000 ms;
             
-            s_button1 <= '0'; wait for 250 ms;
-            s_button1 <= '1'; wait for 100 ms;
+            s_button1 <= '0';
+            s_button0 <= '0'; wait for 250 ms;
+            s_button0 <= '1'; wait for 100 ms;
             
-            s_button1 <= '0'; wait for 250 ms;
-            s_button1 <= '1'; wait for 100 ms;
+            s_button0 <= '0'; wait for 250 ms;
+            s_button0 <= '1'; wait for 100 ms;
             
-            s_button1 <= '0'; wait for 250 ms;
-            s_button1 <= '1'; wait for 100 ms;
+            s_button0 <= '0'; wait for 250 ms;
+            s_button0 <= '1'; wait for 100 ms;
             
-            s_button1 <= '0'; wait for 250 ms;
-            s_button1 <= '1'; wait for 100 ms;
+            s_button0 <= '0'; wait for 250 ms;
+            s_button0 <= '1'; wait for 100 ms;
             
-            s_button1 <= '0'; wait for 250 ms;
-            s_button1 <= '1'; wait for 100 ms;
+            s_button0 <= '0'; wait for 250 ms;
+            s_button0 <= '1'; wait for 100 ms;
+            
+            s_button0 <= '0'; wait for 250 ms;
+            s_button0 <= '1'; wait for 100 ms;
             
             report "Stimulus process finished" severity note;
             wait;

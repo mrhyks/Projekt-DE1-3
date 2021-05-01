@@ -1,3 +1,6 @@
+-----------------------------------------------------------------
+-- This is module for distance.vhd
+-----------------------------------------------------------------
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
@@ -9,6 +12,8 @@ entity distance is
         reset      : in  std_logic;                   -- Synchronous reset
         i_sonda    : in  std_logic;                   -- Wheel spin
         i_wheel    : in  std_logic_vector(1 downto 0);-- Wheel size
+        i_mode     : in  std_logic_vector(1 downto 0);-- Mode input
+        
         o_distance : out unsigned(31 downto 0)        -- Distance from start
    );
 end distance;
@@ -35,6 +40,14 @@ begin
                 end case; 
             end if;
         end if;
+        
+        if i_mode = "11" then
+            o_distance <= s_distance/100;                       --Return value in 1m if mode is "11" (3)
+            
+        else 
+            o_distance <= "00000000000000000000000000000000";   --Return value if mode isn't "11" (3)
+            
+        end if;
+        
     end process p_distance;
-    o_distance<=s_distance/1000;                     --Return value in 10m
 end Behavioral;
