@@ -28,9 +28,9 @@ begin
             btn(1)      => s_btn1,
             CLK100MHZ   => s_clk_100MHz,
             ck_io5      => sensor,
-            ck_io2      => s_speed,
-            ck_io3      => s_avg_speed,
-            ck_io4      => s_distance
+            SPEED       => s_speed,
+            AVG_SPEED   => s_avg_speed,
+            DISTANCE    => s_distance
         );
         
         --------------------------------------------------------------------
