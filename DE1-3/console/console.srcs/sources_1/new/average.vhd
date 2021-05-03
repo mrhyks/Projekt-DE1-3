@@ -52,8 +52,10 @@ begin
                     
                 end if;
             end if;
-            
-        elsif (falling_edge(clk) AND not(s_distance = 0))then --If i_wheel didn't turned this time, add 10ms to total time
+        
+        end if;
+        
+        if (falling_edge(clk) AND not(s_distance = 0))then --If i_wheel didn't turned this time, add 10ms to total time
             s_time<=s_time+10;
             
         end if;

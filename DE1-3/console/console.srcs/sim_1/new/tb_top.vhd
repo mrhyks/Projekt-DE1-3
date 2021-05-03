@@ -18,19 +18,19 @@ architecture Behavioral of tb_top is
     signal s_btn0       : std_logic;
     signal s_btn1       : std_logic;
     signal sensor       : std_logic;
-    signal s_speed      : unsigned(31 downto 0);
-    signal s_avg_speed  : unsigned(31 downto 0);
-    signal s_distance   : unsigned(31 downto 0);
+    signal s_speed      : std_logic_vector(31 downto 0);
+    signal s_avg_speed  : std_logic_vector(31 downto 0);
+    signal s_distance   : std_logic_vector(31 downto 0);
 begin
     uut_top : entity work.top
         port map(
             btn(0)      => s_btn0,
             btn(1)      => s_btn1,
             CLK100MHZ   => s_clk_100MHz,
-            ck_io4      => sensor,
-            SPEED       => s_speed,
-            AVG_SPEED   => s_avg_speed,
-            DISTANCE    => s_distance
+            ck_io5      => sensor,
+            ck_io2      => s_speed,
+            ck_io3      => s_avg_speed,
+            ck_io4      => s_distance
         );
         
         --------------------------------------------------------------------
