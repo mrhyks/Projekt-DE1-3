@@ -1,0 +1,324 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon May  3 15:54:42 2021
+# Process ID: 7712
+# Current directory: D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.runs/synth_1
+# Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+# Log file: D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.runs/synth_1/top.vds
+# Journal file: D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source top.tcl -notrace
+Command: synth_design -top top -part xc7a35ticsg324-1L
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35ti'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35ti'
+INFO: [Device 21-403] Loading part xc7a35ticsg324-1L
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 7152
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1003.766 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top' [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/sources_1/new/top.vhd:45]
+INFO: [Synth 8-638] synthesizing module 'buttons' [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/sources_1/new/buttons.vhd:23]
+INFO: [Synth 8-638] synthesizing module 'wheel' [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/sources_1/new/wheel.vhd:21]
+WARNING: [Synth 8-614] signal 'i_button1' is read in the process but is not in the sensitivity list [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/sources_1/new/wheel.vhd:34]
+WARNING: [Synth 8-614] signal 'i_button0' is read in the process but is not in the sensitivity list [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/sources_1/new/wheel.vhd:34]
+WARNING: [Synth 8-614] signal 's_cnt' is read in the process but is not in the sensitivity list [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/sources_1/new/wheel.vhd:34]
+INFO: [Synth 8-226] default block is never used [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/sources_1/new/wheel.vhd:63]
+WARNING: [Synth 8-614] signal 'i_mode' is read in the process but is not in the sensitivity list [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/sources_1/new/wheel.vhd:60]
+WARNING: [Synth 8-614] signal 'wheel' is read in the process but is not in the sensitivity list [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/sources_1/new/wheel.vhd:60]
+INFO: [Synth 8-256] done synthesizing module 'wheel' (1#1) [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/sources_1/new/wheel.vhd:21]
+INFO: [Synth 8-638] synthesizing module 'mode' [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/sources_1/new/mode.vhd:20]
+WARNING: [Synth 8-614] signal 'i_button0' is read in the process but is not in the sensitivity list [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/sources_1/new/mode.vhd:32]
+WARNING: [Synth 8-614] signal 'i_button1' is read in the process but is not in the sensitivity list [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/sources_1/new/mode.vhd:32]
+WARNING: [Synth 8-614] signal 's_cnt' is read in the process but is not in the sensitivity list [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/sources_1/new/mode.vhd:32]
+INFO: [Synth 8-226] default block is never used [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/sources_1/new/mode.vhd:61]
+WARNING: [Synth 8-614] signal 's_mode' is read in the process but is not in the sensitivity list [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/sources_1/new/mode.vhd:58]
+INFO: [Synth 8-256] done synthesizing module 'mode' (2#1) [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/sources_1/new/mode.vhd:20]
+INFO: [Synth 8-638] synthesizing module 'reset' [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/sources_1/new/reset.vhd:17]
+INFO: [Synth 8-256] done synthesizing module 'reset' (3#1) [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/sources_1/new/reset.vhd:17]
+INFO: [Synth 8-256] done synthesizing module 'buttons' (4#1) [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/sources_1/new/buttons.vhd:23]
+INFO: [Synth 8-638] synthesizing module 'calculations' [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/sources_1/new/calculations.vhd:26]
+INFO: [Synth 8-638] synthesizing module 'average' [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/sources_1/new/average.vhd:21]
+WARNING: [Synth 8-614] signal 's_distance' is read in the process but is not in the sensitivity list [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/sources_1/new/average.vhd:26]
+WARNING: [Synth 8-614] signal 'i_mode' is read in the process but is not in the sensitivity list [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/sources_1/new/average.vhd:26]
+WARNING: [Synth 8-614] signal 's_avg_speed' is read in the process but is not in the sensitivity list [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/sources_1/new/average.vhd:26]
+INFO: [Synth 8-256] done synthesizing module 'average' (5#1) [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/sources_1/new/average.vhd:21]
+INFO: [Synth 8-638] synthesizing module 'speed' [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/sources_1/new/speed.vhd:20]
+WARNING: [Synth 8-614] signal 'i_mode' is read in the process but is not in the sensitivity list [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/sources_1/new/speed.vhd:24]
+WARNING: [Synth 8-614] signal 's_speed' is read in the process but is not in the sensitivity list [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/sources_1/new/speed.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'speed' (6#1) [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/sources_1/new/speed.vhd:20]
+INFO: [Synth 8-638] synthesizing module 'distance' [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/sources_1/new/distance.vhd:21]
+WARNING: [Synth 8-614] signal 'i_mode' is read in the process but is not in the sensitivity list [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/sources_1/new/distance.vhd:24]
+WARNING: [Synth 8-614] signal 's_distance' is read in the process but is not in the sensitivity list [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/sources_1/new/distance.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'distance' (7#1) [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/sources_1/new/distance.vhd:21]
+INFO: [Synth 8-256] done synthesizing module 'calculations' (8#1) [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/sources_1/new/calculations.vhd:26]
+INFO: [Synth 8-256] done synthesizing module 'top' (9#1) [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/sources_1/new/top.vhd:45]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1003.766 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1003.766 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1003.766 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 1003.766 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc]
+WARNING: [Vivado 12-584] No ports matched 'ck_io0'. [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:87]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:87]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ck_io1'. [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:88]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:88]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ck_io2'. [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:89]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:89]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ck_io3'. [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:90]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:90]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ck_io4'. [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:91]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:91]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'mode/s_cnt[2]'. [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:218]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:218]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'mode/s_cnt[3]'. [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:219]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:219]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'mode/s_cnt[4]'. [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:220]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:220]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'mode/s_cnt[5]'. [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:221]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:221]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'mode/s_cnt[6]'. [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:222]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:222]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'mode/s_cnt[7]'. [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:223]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:223]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'mode/s_cnt[8]'. [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:224]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:224]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'o_button0_reset_reg_i_16_n_0'. [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:225]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:225]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'o_button0_reset_reg_i_17_n_0'. [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:226]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:226]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'o_button1_reset_reg_i_19_n_0'. [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:227]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:227]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'plusOp[1]'. [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:228]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:228]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'wheel/s_cnt[2]'. [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:229]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:229]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'wheel/s_cnt[3]'. [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:230]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:230]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'wheel/s_cnt[4]'. [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:231]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:231]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'wheel/s_cnt[5]'. [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:232]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:232]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'wheel/s_cnt[6]'. [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:233]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:233]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'wheel/s_cnt[7]'. [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:234]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:234]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'wheel/s_cnt[8]'. [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:235]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:235]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'buttons/mode/btn[1]'. [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:236]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:236]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1003.766 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1003.766 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1003.766 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35ticsg324-1L
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1003.766 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1003.766 ; gain = 0.000
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-327] inferring latch for variable 'o_button1_reset_reg' [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/sources_1/new/wheel.vhd:42]
+WARNING: [Synth 8-327] inferring latch for variable 'o_wheel_reg' [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/sources_1/new/wheel.vhd:65]
+WARNING: [Synth 8-327] inferring latch for variable 'wheel_reg' [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/sources_1/new/wheel.vhd:63]
+WARNING: [Synth 8-327] inferring latch for variable 'o_button0_reset_reg' [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/sources_1/new/mode.vhd:40]
+WARNING: [Synth 8-327] inferring latch for variable 'o_mode_reg' [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/sources_1/new/mode.vhd:63]
+WARNING: [Synth 8-327] inferring latch for variable 's_mode_reg' [D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/sources_1/new/mode.vhd:61]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1003.766 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    9 Bit       Adders := 2     
+	   2 Input    2 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               20 Bit    Registers := 1     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 1     
+	   4 Input   32 Bit        Muxes := 1     
+	   2 Input   26 Bit        Muxes := 1     
+	   4 Input   20 Bit        Muxes := 2     
+	   2 Input   20 Bit        Muxes := 1     
+	   2 Input    9 Bit        Muxes := 2     
+	   4 Input    2 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1003.766 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1003.766 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1003.766 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1003.766 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1003.766 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1003.766 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1003.766 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1003.766 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1003.766 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1003.766 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------+------+
+|      |Cell  |Count |
++------+------+------+
+|1     |OBUFT |    12|
++------+------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1003.766 ; gain = 0.000
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 6 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:32 . Memory (MB): peak = 1003.766 ; gain = 0.000
+Synthesis Optimization Complete : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 1003.766 ; gain = 0.000
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1003.766 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1003.766 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+33 Infos, 46 Warnings, 24 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 1003.766 ; gain = 0.000
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint 'D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.runs/synth_1/top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon May  3 15:55:29 2021...
