@@ -43,7 +43,7 @@ V top vrstvě bude napojen modul s rozhraními: 3x 32 bit binary a 2x 2 bit bina
 
 Dejme tomu, že jedeme na kole a právě jsme ujeli 12.5 km:
 
-V takové situaci modul pro řízení char LCD displaye příjme z z portu mode dvoubitovou zprávu určující aktuálně zvolený mode, z toho ví, že jej zajímají informace, přicházející na rozhraní, do něhož je zapojen modul "calculations.distance" a získá 32 bitovou binární informaci, která vyjadřuje 1250 (ujetá vzdálenost je počítána v desítkách metrů => 1250 * 10 = 12500 metrů = 12.5 km). Takže ví, že použije preset pro mode 3 => dosadí do modu: 
+V takové situaci modul pro řízení char LCD displaye příjme z portu mode dvoubitovou zprávu určující aktuálně zvolený mode, z toho ví, že jej zajímají informace, přicházející na rozhraní, do něhož je zapojen modul "calculations.distance" a získá 32 bitovou binární informaci, která vyjadřuje 1250 (ujetá vzdálenost je počítána v desítkách metrů => 1250 * 10 = 12500 metrů = 12.5 km). Takže ví, že použije preset pro mode 3 => dosadí do modu: 
 
 řádek 1: mode => Distance + (prázdné znaky)
 
