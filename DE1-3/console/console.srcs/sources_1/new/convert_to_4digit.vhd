@@ -1,36 +1,6 @@
-----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date: 04.05.2021 16:23:15
--- Design Name: 
--- Module Name: convert_to_4digit - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
--- 
-----------------------------------------------------------------------------------
-
-
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use ieee.numeric_std.all;
-
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
 
 entity convert_to_4digit is
     Port (
@@ -49,29 +19,31 @@ end convert_to_4digit;
 
 architecture Behavioral of convert_to_4digit is
     signal s_helper : unsigned(31 downto 0);
-    signal s_D0 : unsigned(3 downto 0):="0000";
-    signal s_D1 : unsigned(3 downto 0):="0000";
-    signal s_D2 : unsigned(3 downto 0):="0000";
-    signal s_D3 : unsigned(3 downto 0):="0000";
+    signal s_D0     : unsigned(3 downto 0);
+    signal s_D1     : unsigned(3 downto 0);
+    signal s_D2     : unsigned(3 downto 0);
+    signal s_D3     : unsigned(3 downto 0);
 begin
     
     p_convert:process(clk)
     begin  
-        if i_sensor = '1' then
+        if i_sensor = '1' then                  --If wheel spins, set LSB of helper counter to Undefined
             s_helper(0) <= 'U';  
         end if;
         
-        if(i_MODE="01")then
-            if s_helper(0) = 'U' then
-                s_helper <= i_SPD;
-                s_D0 <="0001";
+        if(i_MODE="01")then                     --If mode is set to display SPEED continue
+        
+            if s_helper(0) = 'U' then           --If LSB of helper counter is undefined, set value of helper to SPEED
+                s_helper <= i_SPD;              
+                s_D0 <="0001";                  --Set initial values of digits to 0
                 s_D1 <="0000";
                 s_D2 <="0000";
                 s_D3 <="0000";
-            elsif s_helper>0 then 
-                if(s_helper>=1000)then
-                    s_helper<=s_helper-1000;
-                    s_D3<=s_D3+1;   
+                
+            elsif s_helper>0 then               
+                if(s_helper>=1000)then          --Lower helper counter depending on its size
+                    s_helper<=s_helper-1000;    --If helper counter is bigger then 1000, lower its values by 100
+                    s_D3<=s_D3+1;               --
                 elsif(s_helper>=100)then
                     s_helper<=s_helper-100; 
                     s_D2<=s_D2+1;
@@ -90,12 +62,14 @@ begin
             end if;
                
          elsif(i_MODE="10")then
+         
             if s_helper(0) = 'U' then
                 s_helper<=i_AVGS;
                 s_D0 <="0001";
                 s_D1 <="0000";
                 s_D2 <="0000";
                 s_D3 <="0000";
+                
             elsif s_helper>0 then 
                 if(s_helper>=1000)then
                     s_helper<=s_helper-1000;
@@ -118,12 +92,14 @@ begin
             end if;
             
          elsif(i_MODE="11")then
+         
             if s_helper(0) = 'U' then
                 s_helper<=i_DIST;
                 s_D0 <="0001";
                 s_D1 <="0000";
                 s_D2 <="0000";
                 s_D3 <="0000";
+                
             elsif s_helper>0 then 
                 if(s_helper>=1000)then
                     s_helper<=s_helper-1000;

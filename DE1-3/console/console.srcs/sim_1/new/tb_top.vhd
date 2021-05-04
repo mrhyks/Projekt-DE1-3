@@ -21,15 +21,16 @@ architecture Behavioral of tb_top is
     signal s_speed      : unsigned(31 downto 0);
     signal s_avg_speed  : unsigned(31 downto 0);
     signal s_distance   : unsigned(31 downto 0);
-    signal s_segmentA         : std_logic_vector(6 downto 0);
-    signal s_segmentB         : std_logic_vector(6 downto 0);
-    signal s_segmentC         : std_logic_vector(6 downto 0);
-    signal s_segmentD         : std_logic_vector(6 downto 0);
     
-    signal s_digit0       : unsigned(3 downto 0);
-    signal s_digit1       : unsigned(3 downto 0);
-    signal s_digit2       : unsigned(3 downto 0);
-    signal s_digit3       : unsigned(3 downto 0);
+    signal s_segmentA   : std_logic_vector(6 downto 0);
+    signal s_segmentB   : std_logic_vector(6 downto 0);
+    signal s_segmentC   : std_logic_vector(6 downto 0);
+    signal s_segmentD   : std_logic_vector(6 downto 0);
+    
+    signal s_digit0     : unsigned(3 downto 0);
+    signal s_digit1     : unsigned(3 downto 0);
+    signal s_digit2     : unsigned(3 downto 0);
+    signal s_digit3     : unsigned(3 downto 0);
 begin
     uut_top : entity work.top
         port map(
@@ -37,19 +38,19 @@ begin
             btn(1)      => s_btn1,
             CLK100MHZ   => s_clk_100MHz,
             ck_io5      => sensor,
-            o_SPEED       => s_speed,
-            o_AVG_SPEED   => s_avg_speed,
-            o_DISTANCE    => s_distance,
+            o_SPEED     => s_speed,
+            o_AVG_SPEED => s_avg_speed,
+            o_DISTANCE  => s_distance,
             
-            s_outA => s_segmentA,
-            s_outB => s_segmentB,
-            s_outC => s_segmentC,
-            s_outD => s_segmentD,
+            JA          => s_segmentA,
+            JB          => s_segmentB,
+            JC          => s_segmentC,
+            JD          => s_segmentD,
             
-            digit0_o=>s_digit0, 
-            digit1_o=>s_digit1, 
-            digit2_o=>s_digit2, 
-            digit3_o=>s_digit3  
+            digit0_o    => s_digit0, 
+            digit1_o    => s_digit1, 
+            digit2_o    => s_digit2, 
+            digit3_o    => s_digit3  
             
         );
         
