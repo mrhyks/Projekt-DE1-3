@@ -13,7 +13,7 @@
 ### Cíle projektu
 
 Cílem projektu je vytvořit konzoli pro rotoped či kolo s hallovou sondou. Pro zobrazování výstupu jako je 
-rychlost, průměrná rychlost a ujetá vzdálenost jsme zvolili LCD displej.
+rychlost, průměrná rychlost a ujetá vzdálenost jsme zvolili čtyři sedmi-segmentové displeje.
 
 **Jednotlivé body projektu:**
 
@@ -25,7 +25,7 @@ rychlost, průměrná rychlost a ujetá vzdálenost jsme zvolili LCD displej.
 *   V případě, že uživatel chce resetovat data a začít znovu (neresetuje se nastavený mód a kola) stačí držet obě tlačítka po dobu dvou a více sekund, resetuje se ujetá vzdálenost a průměrná rychlost.
                
 **- Výstup** 
-*   Výstup změřené a vypočítané rychlosti, průměrné rychlosti a vzdálenosti získané pomocí hallovy sondy do LCD displeje. Pro překlad binarního výstupu by byl zapotřebí externí výpočetní modul, jako je např. arduino. Funkce tohoto modulu je popsána v sekci **Popis Hardwaru**  
+*   Výstup změřené a vypočítané rychlosti, průměrné rychlosti a vzdálenosti získané pomocí hallovy sondy do 4x 7 segment displej. 
 
 **- Možnost volby průměru kola**
 
@@ -34,35 +34,7 @@ rychlost, průměrná rychlost a ujetá vzdálenost jsme zvolili LCD displej.
 
 Jako vývojovou desku jsme vybrali Arty A7 35. 
 
-Pro zobrazování výstupu by jsme použili Pmod CLP (Revision B) module. Funkci modulu jsme popsali pouze teoreticky, protože se nám nepodařilo
-vytvořit překlad binárního výstupu do ASCII ve VHDL, který je potřeba pro zobrazování.  
-
-**Funkce Pmod CLP (Revision B) module**
-
-V top vrstvě bude napojen modul s rozhraními: 3x 32 bit binary a 2x 2 bit binary. Ty následně budou napojeny na výpočetní modul (například Arduino) jež bude obsahovat program psaný například v C# a ten bude mít za úkol dosazení hodnot přijatých jednotlivými interfacy do daných struktur pro módy 1 - 4, následně je přeložit do binární abecedy pro jednotlivé znaky dle tabulky, která je přiložena v dokumentaci tohoto LCD char displaye, následně je podle vlastního časovače bude dle námi nastaveného času odesílat na display spolu s předcházejícím příkazem clear na jednotlivé porty, jejichž popsání a zapojení je také psáno v dokumentaci a tím dojde k vypsání zprávy na obrazovku.
-
-Dejme tomu, že jedeme na kole a právě jsme ujeli 12.5 km:
-
-V takové situaci modul pro řízení char LCD displaye příjme z portu mode dvoubitovou zprávu určující aktuálně zvolený mode, z toho ví, že jej zajímají informace, přicházející na rozhraní, do něhož je zapojen modul "calculations.distance" a získá 32 bitovou binární informaci, která vyjadřuje 1250 (ujetá vzdálenost je počítána v desítkách metrů => 1250 * 10 = 12500 metrů = 12.5 km). Takže ví, že použije preset pro mode 3 => dosadí do modu: 
-
-řádek 1: mode => Distance + (prázdné znaky)
-
-řádek 2: No.mode => 3. + (prázdný znak) + přijaté hodnoty přepočítané na kilometry => 12.5 + (prázdný znak) + jednotka (km) + (prázdné znaky)
-
-Ty následně převede dle tabulky z dokumentace na binární kód, který zašle na jednotlivé porty char LCD displaye spolu s předcházenícím clear display příkazem, podle námi nastaveného času pro refresh rate.
-Příklad takové zprávy zasílané na display pro ujetou vzdálenost 12,5 km
-
-```
-clear: RS --> 0 RW --> 0 + D0 - D7 --> 1000 0000
-first line:  0010 0010(D)|1001 0110(i)|1100 1110(s)|0010 1110(t)|1000 0110(a)|0111 0110(n)|
-             1100 0110(c)|1010 0110(e)|0000 0100(blank)|0000 0100(blank)|0000 0100(blank)|
-             0000 0100(blank)|0000 0100(blank)|0000 0100(blank)|0000 0100(blank)|0000 0100(blank)|
-second line: 1100 1100(3)|0111 0100(.)|0000 0100(blank)|1000 1100(1)|0100 1100(2)|0111 0100(.)|
-             1010 1100(5)|0000 0100(blank)|0000 0100(blank)|1101 0010(K)|1011 1010(m)|0000 0100(blank)|
-             0000 0100(blank)|0000 0100(blank)|0000 0100(blank)|0000 0100(blank)| 
-```
-Tabulka pro náš LCD modul:
-![ASCII table](Images/pmodclp_predefinedcharacters.png)
+Pro zobrazování výstupu by jsme použili 2x Pmod SSD (4x 7 segmentový displej), které by byly napojené na Pmod porty JA - JB, JC - JD. 
 
 ## Popis a simulace modulů VHDL
 
@@ -85,7 +57,7 @@ Z obrázku simulace lze vidět, že při módu (s_MODE) jiným než 0 se nedá m
         
 #### Modul `mode.vhd` 
 
-Modul `mode.vhd` je modul, ve kterým se volí mód zobrazení výstupu na displej a mód na volbu kola. Tento modul využívá hlavně tlačítko btn0, ale je zde řešen jeden ze dvou reset signálů do modulu `reset.vhd`, který se vyšle jen tehdy, pokud je tlačítko btn0 a btn1 stisknuté po dobu 2 a více sekund.
+Modul `mode.vhd` je modul, ve kterým se volí mód zobrazení výstupu na displeje a mód na volbu kola. Tento modul využívá hlavně tlačítko btn0, ale je zde řešen jeden ze dvou reset signálů do modulu `reset.vhd`, který se vyšle jen tehdy, pokud je tlačítko btn0 a btn1 stisknuté po dobu 2 a více sekund.
 To je řešeno pomocí časovače, který je spuštěný clk každých 10 ms po dobu 2 sekund a poté je vyslán signál resetu. 
 
 **Simulace modulu**
@@ -160,7 +132,7 @@ Modul `average.vhd` zobrazuje průměrnou rychlost uživatele za celou dobu, kte
 
 #### Modul `distance.vhd` 
 
-V modulu `distance.vhd` se řeší ujetá vzdálenost, která je závyslá na zvolené velikosti kola. Zobrazená vzdálenost v simulaci je nastavena v jednotkách metrů (1 m) pro lepší přehlednost, mimo simulace je nastavena v řádu desítek metrů (10 m). 
+V modulu `distance.vhd` se řeší ujetá vzdálenost, která je závyslá na zvolené velikosti kola. Zobrazená vzdálenost v simulaci je nastavena v jednotkách desítek metrů (10 m). 
 
 **Simulace modulu**
 ![Simulation of distance.vhd](Images/dist_sim.png)
@@ -170,9 +142,30 @@ V modulu `distance.vhd` se řeší ujetá vzdálenost, která je závyslá na zv
 - [Design](https://github.com/mrhyks/Projekt-DE1-3/blob/main/DE1-3/console/console.srcs/sources_1/new/distance.vhd)
 - [Testbench](https://github.com/mrhyks/Projekt-DE1-3/blob/main/DE1-3/console/console.srcs/sim_1/new/tb_distance.vhd)
 
+### Modul `convert_to_4digit.vhd` 
+
+V modulu `convert_to_4digit.vhd` se signál speed, average speed a distance konvertuje z 32b na 4b tak, aby bylo možné použít 4x 7seg displej. Modul postupně odečítá hodnotu ze získaného signálu, dokud nebude 0. 
+
+**Simulace modulu**
+![Simulation of distance.vhd](Images/4dig_sim.png)
+
+**Odkazy:** 
+
+- [Design](https://github.com/mrhyks/Projekt-DE1-3/blob/main/DE1-3/console/console.srcs/sources_1/new/convert_to_4digit.vhd)
+- [Testbench](https://github.com/mrhyks/Projekt-DE1-3/blob/main/DE1-3/console/console.srcs/sim_1/new/tb_convert_to_4digit.vhd)
+
+### Modul `hex7seg.vhd` 
+
+Modul `hex7seg.vhd` slouží k demonstraci 4x 7 segmentových displejů, překládá 4 bitové hodnoty z `convert_to_4digit.vhd` na zapínání jednotlivých částí na sedmi segmentovým displeji.
+
+**Odkazy:** 
+
+- [Design](https://github.com/mrhyks/Projekt-DE1-3/blob/main/DE1-3/console/console.srcs/sources_1/new/hex7seg.vhd)
+- [Testbench](https://github.com/mrhyks/Projekt-DE1-3/blob/main/DE1-3/console/console.srcs/sim_1/new/tb_hex_7seg.vhd)
+
 ## Popis a simulace TOP modulu
 
-Modul `top.vhd` spojuje moduly `buttons.vhd` a `calculations.vhd`. Do modulu `buttons.vhd` přivádí signál z tlačítek a clk, do `calculations.vhd` mode, reset a wheel z modulu `buttons.vhd`. Dále je přiveden signál ze Hallovi sondy a clk. Z celého modulu jdou pryč signály z modulů distance, average a speed. Tyto signály jsou přivedeneny na piny, které by vedly do arduina, které by signál přeložilo z binárního kódu do ASCII a poslalo zpět do desky, kde by to bylo propojeno s piny JA a JB (Pmod piny) do LCD displeje. 
+Modul `top.vhd` spojuje moduly `buttons.vhd`, `calculations.vhd`,`hex7seg.vhd` a `convert_to_4digit.vhd`. Do modulu `buttons.vhd` přivádí signál z tlačítek a clk, do `calculations.vhd` mode, reset a wheel z modulu `buttons.vhd`. Dále je přiveden signál ze Hallovi sondy a clk. Signály průměrné rychlosti, rychlosti a ujeté vzdálenosti z `calculations.vhd` jsou přivedeny do modulu `convert_to_4digit.vhd`, kde jsou rozděleny na jednotlivé číslice o 4 bitech a vyvedeny do `hex7seg.vhd`, kde se překládají pro zobrazení na 4x 7-segment displejích.
 
 **Simulace modulu**
 - 0 - 10s
@@ -191,12 +184,12 @@ Modul `top.vhd` spojuje moduly `buttons.vhd` a `calculations.vhd`. Do modulu `bu
 
 ## Video
 
-*Write your text here*
+[Odkaz](https://drive.google.com/file/d/1CwY5artjyWuxMTzwrxVljAfrGmFoBiob/view)
 
 
 ## Reference
 
    1. [Arty A7 reference manual](https://reference.digilentinc.com/reference/programmable-logic/arty-a7/reference-manual)
    2. [Digilent Pmod Interface Specification](https://www.digilentinc.com/Pmods/Digilent-Pmod_%20Interface_Specification.pdf)
-   3. [Pmod CLP Reference Manual](https://reference.digilentinc.com/reference/pmod/pmodclp/reference-manual)
    4. [Pmod Hardware Compatibility Guide](https://reference.digilentinc.com/pmod/hardware_compatibility)
+   5. [Pmod SSD](https://reference.digilentinc.com/reference/pmod/pmodssd/start)
