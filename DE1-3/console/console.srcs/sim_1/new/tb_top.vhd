@@ -21,10 +21,10 @@ architecture Behavioral of tb_top is
 --    signal s_speed      : unsigned(31 downto 0);
 --    signal s_avg_speed  : unsigned(31 downto 0);
 --    signal s_distance   : unsigned(31 downto 0);
-    signal s_ja         : unsigned(7 downto 4);
-    signal s_jb         : unsigned(7 downto 4);
-    signal s_jc         : unsigned(7 downto 4);
-    signal s_jd         : unsigned(7 downto 4);
+    signal s_ja         : std_logic_vector(6 downto 0);
+    signal s_jb         : std_logic_vector(6 downto 0);
+    signal s_jc         : std_logic_vector(6 downto 0);
+    signal s_jd         : std_logic_vector(6 downto 0);
 begin
     uut_top : entity work.top
         port map(
@@ -35,10 +35,10 @@ begin
 --            SPEED       => s_speed,
 --            AVG_SPEED   => s_avg_speed,
 --            DISTANCE    => s_distance
-            ja=> s_ja,
-            jb =>s_jb,
-            jc =>s_jc,
-            jd =>s_jd
+            ja => s_ja,
+            jb => s_jb,
+            jc => s_jc,
+            jd => s_jd
             
             
         );

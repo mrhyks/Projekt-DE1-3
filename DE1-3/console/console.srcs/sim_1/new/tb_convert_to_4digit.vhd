@@ -38,12 +38,12 @@ end tb_convert_to_4digit;
 
 architecture Behavioral of tb_convert_to_4digit is
     signal s_clk_100MHz          : std_logic;                   -- clk signal
-    signal s_RESET               : std_logic;
     
     signal s_MODE                : std_logic_vector(1 downto 0);
     signal s_SPD                 : unsigned(31 downto 0);
     signal s_AVGS                : unsigned(31 downto 0);
     signal s_DIST                : unsigned(31 downto 0);
+    signal s_sensor              : std_logic;
     
     constant c_CLK_100MHZ_PERIOD : time := 10 ms;
 begin
@@ -53,7 +53,8 @@ begin
             i_MODE  => s_MODE,
             i_SPD   => s_SPD,
             i_AVGS  => s_AVGS,
-            i_DIST  => s_DIST
+            i_DIST  => s_DIST,
+            i_sensor => s_sensor
         );
         
         --------------------------------------------------------------------
@@ -70,6 +71,28 @@ begin
             wait;
         end process p_clk_gen;
         
+        p_sensor_gen : process
+        begin
+            while now < 10000 ms loop
+                s_sensor<='0';wait for 300ms;
+                s_sensor<='1';wait for 10ms;
+                s_sensor<='0';wait for 300ms;
+                s_sensor<='1';wait for 10ms;
+                s_sensor<='0';wait for 300ms;
+                s_sensor<='1';wait for 10ms;
+                s_sensor<='0';wait for 300ms;
+                s_sensor<='1';wait for 10ms;
+                s_sensor<='0';wait for 300ms;
+                s_sensor<='1';wait for 10ms;
+                s_sensor<='0';wait for 300ms;
+                s_sensor<='1';wait for 10ms;
+                s_sensor<='0';wait for 300ms;
+                s_sensor<='1';wait for 10ms;
+                s_sensor<='0';wait for 500ms;
+            end loop;
+            wait;
+        end process p_sensor_gen;
+        
         ----------------------------------------------------------------------
         -- Artificial generator for mode signal 
         ----------------------------------------------------------------------
@@ -77,6 +100,8 @@ begin
         begin
             s_MODE <= "01"; wait for 500 ms;
             s_SPD<="00000000000000000000100111101110";
+            s_MODE <= "01"; wait for 500 ms;
+            s_SPD<="00000000000000000000111111111110";
             s_MODE <= "01"; wait for 1500 ms;
             s_SPD<="00000000000000000000100111101110";
             s_MODE <= "10"; wait for 1500 ms;
