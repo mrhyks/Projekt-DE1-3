@@ -48,35 +48,41 @@ end convert_to_4digit;
 
 architecture Behavioral of convert_to_4digit is
     signal s_helper : unsigned(31 downto 0);
-    signal s_D0 : unsigned(3 downto 0);
-    signal s_D1 : unsigned(3 downto 0);
-    signal s_D2 : unsigned(3 downto 0);
-    signal s_D3 : unsigned(3 downto 0);
+    signal s_D0 : unsigned(3 downto 0):="0000";
+    signal s_D1 : unsigned(3 downto 0):="0000";
+    signal s_D2 : unsigned(3 downto 0):="0000";
+    signal s_D3 : unsigned(3 downto 0):="0000";
 begin
-    p_convert:process(clk)
+    p_convert:process(clk,i_SPD)
     begin
-        s_D0<="0000";
-        s_D1<="0000";
-        s_D2<="0000";
-        s_D3<="0000";
+--        s_D0<="0000";
+--        s_D1<="0000";
+--        s_D2<="0000";
+--        s_D3<="0000";
         
+        --if rising_edge(clk) then
         if(i_MODE="01")then
             s_helper<=i_SPD;
-            while s_helper>0 loop
-                if(s_helper>1000)then
-                    s_helper<=s_helper-"00000000000000000000001111101000";
+            
+            --while s_helper>0 loop
+            if s_helper>0 then
+                
+                if(s_helper>=1000)then
+                    s_helper<=s_helper-1000;
                     s_D3<=s_D3+1;   
-                elsif(s_helper>100)then
+                elsif(s_helper>=100)then
                     s_helper<=s_helper-100; 
                     s_D2<=s_D2+1;
-                elsif(s_helper>10)then
+                elsif(s_helper>=10)then
                     s_helper<=s_helper-10; 
                     s_D1<=s_D1+1;
-                elsif(s_helper>1)then
+                elsif(s_helper>=1)then
                     s_helper<=s_helper-1;
                     s_D0<=s_D0+1; 
                 end if;
-            end loop;
+                
+            --end loop;
+            end if;
             o_D0<=s_D0; 
             o_D1<=s_D1; 
             o_D2<=s_D2; 
@@ -123,6 +129,7 @@ begin
             o_D1<=s_D1; 
             o_D2<=s_D2; 
             o_D3<=s_D3;     
-         end if;    
+         end if;  
+         --end if;  
     end process p_convert;
 end Behavioral;
