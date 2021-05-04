@@ -42,10 +42,10 @@ begin
                 
             elsif s_helper>0 then               
                 if(s_helper>=1000)then          --Lower helper counter depending on its size
-                    s_helper<=s_helper-1000;    --If helper counter is bigger then 1000, lower its values by 100
-                    s_D3<=s_D3+1;               --
+                    s_helper<=s_helper-1000;    --If helper counter is bigger then 1000, lower its values by 1000
+                    s_D3<=s_D3+1;               --Increase value of biggest digit by 1
                 elsif(s_helper>=100)then
-                    s_helper<=s_helper-100; 
+                    s_helper<=s_helper-100;     
                     s_D2<=s_D2+1;
                 elsif(s_helper>=10)then
                     s_helper<=s_helper-10; 
@@ -55,13 +55,13 @@ begin
                     s_D0<=s_D0+1; 
                 end if;
                 
-                o_D0<=s_D0; 
+                o_D0<=s_D0;                     --output inner signals
                 o_D1<=s_D1; 
                 o_D2<=s_D2; 
                 o_D3<=s_D3; 
             end if;
                
-         elsif(i_MODE="10")then
+         elsif(i_MODE="10")then                 --If mode is set to display AVG SPEED continue
          
             if s_helper(0) = 'U' then
                 s_helper<=i_AVGS;
@@ -91,7 +91,7 @@ begin
                 o_D3<=s_D3; 
             end if;
             
-         elsif(i_MODE="11")then
+         elsif(i_MODE="11")then                  --If mode is set to display DISTANCE continue
          
             if s_helper(0) = 'U' then
                 s_helper<=i_DIST;

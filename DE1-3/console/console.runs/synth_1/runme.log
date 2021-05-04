@@ -17,9 +17,9 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t
 INFO: [Device 21-403] Loading part xc7a35ticsg324-1L
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 9260
+INFO: [Synth 8-7075] Helper process launched with PID 6524
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1005.371 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1002.176 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'top' [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/sources_1/new/top.vhd:45]
 INFO: [Synth 8-638] synthesizing module 'buttons' [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/sources_1/new/buttons.vhd:23]
@@ -56,20 +56,34 @@ WARNING: [Synth 8-614] signal 'i_mode' is read in the process but is not in the 
 WARNING: [Synth 8-614] signal 's_distance' is read in the process but is not in the sensitivity list [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/sources_1/new/distance.vhd:24]
 INFO: [Synth 8-256] done synthesizing module 'distance' (7#1) [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/sources_1/new/distance.vhd:21]
 INFO: [Synth 8-256] done synthesizing module 'calculations' (8#1) [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/sources_1/new/calculations.vhd:26]
-INFO: [Synth 8-256] done synthesizing module 'top' (9#1) [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/sources_1/new/top.vhd:45]
+INFO: [Synth 8-638] synthesizing module 'convert_to_4digit' [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/sources_1/new/convert_to_4digit.vhd:20]
+WARNING: [Synth 8-7143] Equality comparison of non constant with static metalogical value is evaluated as 'false'. This may cause simulation-synthesis differences [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/sources_1/new/convert_to_4digit.vhd:36]
+WARNING: [Synth 8-7143] Equality comparison of non constant with static metalogical value is evaluated as 'false'. This may cause simulation-synthesis differences [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/sources_1/new/convert_to_4digit.vhd:66]
+WARNING: [Synth 8-7143] Equality comparison of non constant with static metalogical value is evaluated as 'false'. This may cause simulation-synthesis differences [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/sources_1/new/convert_to_4digit.vhd:96]
+WARNING: [Synth 8-614] signal 'i_sensor' is read in the process but is not in the sensitivity list [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/sources_1/new/convert_to_4digit.vhd:28]
+WARNING: [Synth 8-614] signal 'i_MODE' is read in the process but is not in the sensitivity list [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/sources_1/new/convert_to_4digit.vhd:28]
+WARNING: [Synth 8-614] signal 's_helper' is read in the process but is not in the sensitivity list [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/sources_1/new/convert_to_4digit.vhd:28]
+WARNING: [Synth 8-614] signal 's_D3' is read in the process but is not in the sensitivity list [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/sources_1/new/convert_to_4digit.vhd:28]
+WARNING: [Synth 8-614] signal 's_D2' is read in the process but is not in the sensitivity list [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/sources_1/new/convert_to_4digit.vhd:28]
+WARNING: [Synth 8-614] signal 's_D1' is read in the process but is not in the sensitivity list [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/sources_1/new/convert_to_4digit.vhd:28]
+WARNING: [Synth 8-614] signal 's_D0' is read in the process but is not in the sensitivity list [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/sources_1/new/convert_to_4digit.vhd:28]
+INFO: [Synth 8-256] done synthesizing module 'convert_to_4digit' (9#1) [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/sources_1/new/convert_to_4digit.vhd:20]
+INFO: [Synth 8-638] synthesizing module 'hex7seg' [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/sources_1/new/hex7seg.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'hex7seg' (10#1) [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/sources_1/new/hex7seg.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'top' (11#1) [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/sources_1/new/top.vhd:45]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1005.371 ; gain = 0.000
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1002.176 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1005.371 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1002.176 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1005.371 ; gain = 0.000
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1002.176 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1005.371 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1002.176 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -96,9 +110,6 @@ Resolution: If [get_<value>] was used to populate the object, check to make sure
 WARNING: [Vivado 12-584] No ports matched 'ja[6]'. [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:49]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:49]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'ja[7]'. [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:50]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:50]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'jb[0]'. [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:53]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:53]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
@@ -111,20 +122,56 @@ Resolution: If [get_<value>] was used to populate the object, check to make sure
 WARNING: [Vivado 12-584] No ports matched 'jb[3]'. [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:56]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:56]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'ck_io0'. [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:87]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:87]
+WARNING: [Vivado 12-584] No ports matched 'jb[4]'. [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:57]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:57]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'ck_io1'. [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:88]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:88]
+WARNING: [Vivado 12-584] No ports matched 'jb[5]'. [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:58]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:58]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'ck_io2'. [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:89]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:89]
+WARNING: [Vivado 12-584] No ports matched 'jb[6]'. [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:59]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:59]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'ck_io3'. [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:90]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:90]
+WARNING: [Vivado 12-584] No ports matched 'jc[0]'. [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:63]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:63]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'ck_io4'. [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:91]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:91]
+WARNING: [Vivado 12-584] No ports matched 'jc[1]'. [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:64]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:64]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'jc[2]'. [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:65]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:65]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'jc[3]'. [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:66]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:66]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'jc[4]'. [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:67]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:67]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'jc[5]'. [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:68]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:68]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'jc[6]'. [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:69]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:69]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'jd[0]'. [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:73]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:73]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'jd[1]'. [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:74]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:74]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'jd[2]'. [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:75]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:75]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'jd[3]'. [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:76]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:76]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'jd[4]'. [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:77]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:77]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'jd[5]'. [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:78]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:78]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'jd[6]'. [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:79]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:79]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-507] No nets matched 'mode/s_cnt[2]'. [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:218]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc:218]
@@ -188,26 +235,26 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1005.371 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1002.176 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1005.371 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1002.176 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1005.371 ; gain = 0.000
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1002.176 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35ticsg324-1L
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1005.371 ; gain = 0.000
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1002.176 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1005.371 ; gain = 0.000
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1002.176 ; gain = 0.000
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-327] inferring latch for variable 'o_button1_reset_reg' [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/sources_1/new/wheel.vhd:42]
 WARNING: [Synth 8-327] inferring latch for variable 'o_wheel_reg' [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/sources_1/new/wheel.vhd:65]
@@ -215,27 +262,40 @@ WARNING: [Synth 8-327] inferring latch for variable 'wheel_reg' [C:/Users/Test/D
 WARNING: [Synth 8-327] inferring latch for variable 'o_button0_reset_reg' [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/sources_1/new/mode.vhd:40]
 WARNING: [Synth 8-327] inferring latch for variable 'o_mode_reg' [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/sources_1/new/mode.vhd:63]
 WARNING: [Synth 8-327] inferring latch for variable 's_mode_reg' [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/sources_1/new/mode.vhd:61]
+WARNING: [Synth 8-327] inferring latch for variable 'o_D0_reg' [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/sources_1/new/convert_to_4digit.vhd:58]
+WARNING: [Synth 8-327] inferring latch for variable 'o_D1_reg' [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/sources_1/new/convert_to_4digit.vhd:59]
+WARNING: [Synth 8-327] inferring latch for variable 'o_D2_reg' [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/sources_1/new/convert_to_4digit.vhd:60]
+WARNING: [Synth 8-327] inferring latch for variable 'o_D3_reg' [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/sources_1/new/convert_to_4digit.vhd:61]
+WARNING: [Synth 8-327] inferring latch for variable 's_D0_reg' [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/sources_1/new/convert_to_4digit.vhd:55]
+WARNING: [Synth 8-327] inferring latch for variable 's_helper_reg' [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/sources_1/new/convert_to_4digit.vhd:31]
+WARNING: [Synth 8-327] inferring latch for variable 's_D1_reg' [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/sources_1/new/convert_to_4digit.vhd:52]
+WARNING: [Synth 8-327] inferring latch for variable 's_D2_reg' [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/sources_1/new/convert_to_4digit.vhd:49]
+WARNING: [Synth 8-327] inferring latch for variable 's_D3_reg' [C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/sources_1/new/convert_to_4digit.vhd:46]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1005.371 ; gain = 0.000
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1002.176 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
+	   2 Input   32 Bit       Adders := 4     
 	   2 Input    9 Bit       Adders := 2     
+	   2 Input    4 Bit       Adders := 4     
 	   2 Input    2 Bit       Adders := 2     
 +---Registers : 
 	               32 Bit    Registers := 1     
 	               20 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input   32 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 4     
 	   4 Input   32 Bit        Muxes := 1     
 	   2 Input   23 Bit        Muxes := 1     
 	   4 Input   20 Bit        Muxes := 2     
 	   2 Input   20 Bit        Muxes := 1     
 	   2 Input    9 Bit        Muxes := 2     
 	   4 Input    2 Bit        Muxes := 2     
+	   4 Input    1 Bit        Muxes := 6     
+	   2 Input    1 Bit        Muxes := 3     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -252,25 +312,25 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1005.371 ; gain = 0.000
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1002.176 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1005.371 ; gain = 0.000
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1002.176 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1005.371 ; gain = 0.000
+Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1002.176 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1005.371 ; gain = 0.000
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1002.176 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -288,37 +348,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1005.371 ; gain = 0.000
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1004.008 ; gain = 1.832
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1005.371 ; gain = 0.000
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1004.008 ; gain = 1.832
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1005.371 ; gain = 0.000
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1004.008 ; gain = 1.832
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1005.371 ; gain = 0.000
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1004.008 ; gain = 1.832
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1005.371 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1004.008 ; gain = 1.832
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1005.371 ; gain = 0.000
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1004.008 ; gain = 1.832
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -334,43 +394,43 @@ Report Cell Usage:
 +------+-------+------+
 |      |Cell   |Count |
 +------+-------+------+
-|1     |BUFG   |     1|
-|2     |CARRY4 |   944|
-|3     |LUT1   |   331|
-|4     |LUT2   |   326|
-|5     |LUT3   |  2937|
-|6     |LUT4   |    94|
-|7     |LUT5   |    44|
-|8     |LUT6   |   170|
+|1     |BUFG   |     2|
+|2     |CARRY4 |   976|
+|3     |LUT1   |   445|
+|4     |LUT2   |   339|
+|5     |LUT3   |  2942|
+|6     |LUT4   |   209|
+|7     |LUT5   |   131|
+|8     |LUT6   |    78|
 |9     |FDRE   |   159|
-|10    |LD     |     8|
+|10    |LD     |    72|
 |11    |LDC    |     2|
 |12    |IBUF   |     4|
-|13    |OBUF   |    96|
+|13    |OBUF   |   140|
 +------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1005.371 ; gain = 0.000
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1004.008 ; gain = 1.832
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 6 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:22 . Memory (MB): peak = 1005.371 ; gain = 0.000
-Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1005.371 ; gain = 0.000
+Synthesis finished with 0 errors, 0 critical warnings and 15 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 1004.008 ; gain = 1.832
+Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1004.008 ; gain = 1.832
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.057 . Memory (MB): peak = 1011.492 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 954 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.066 . Memory (MB): peak = 1004.008 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1050 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1011.492 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1005.551 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 10 instances were transformed.
-  LD => LDCE: 8 instances
+  A total of 74 instances were transformed.
+  LD => LDCE: 72 instances
   LDC => LDCE: 2 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-35 Infos, 58 Warnings, 36 Critical Warnings and 0 Errors encountered.
+39 Infos, 88 Warnings, 47 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:37 . Memory (MB): peak = 1011.492 ; gain = 6.121
+synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1005.551 ; gain = 3.375
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.runs/synth_1/top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue May  4 16:18:07 2021...
+INFO: [Common 17-206] Exiting Vivado at Tue May  4 23:06:24 2021...

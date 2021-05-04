@@ -51,10 +51,10 @@ architecture Behavioral of top is
     signal s_DISTANCE  : unsigned(31 downto 0);       -- Internal distance signal
     
     -- For testing of 7 segments 
-    signal s_segmentA  : std_logic_vector(3 downto 0);-- Internal segment A signal
-    signal s_segmentB  : std_logic_vector(3 downto 0);-- Internal segment B signal
-    signal s_segmentC  : std_logic_vector(3 downto 0);-- Internal segment C signal
-    signal s_segmentD  : std_logic_vector(3 downto 0);-- Internal segment D signal
+    signal s_segmentA  : std_logic_vector(6 downto 0);-- Internal segment A signal
+    signal s_segmentB  : std_logic_vector(6 downto 0);-- Internal segment B signal
+    signal s_segmentC  : std_logic_vector(6 downto 0);-- Internal segment C signal
+    signal s_segmentD  : std_logic_vector(6 downto 0);-- Internal segment D signal
     
     -- Separate inner counters of speed, avg speed and distance to 4 digits
     signal s_digit0    : unsigned(3 downto 0);
@@ -134,10 +134,10 @@ begin
             seg_o => s_segmentD       
         );
     --Retype unsigned to std_logic_vector
-    JD <= std_logic_vector(s_digit3);
-    JC <= std_logic_vector(s_digit2);
-    JB <= std_logic_vector(s_digit1);
-    JA <= std_logic_vector(s_digit0);
+    JD <= std_logic_vector(s_segmentD);
+    JC <= std_logic_vector(s_segmentC);
+    JB <= std_logic_vector(s_segmentB);
+    JA <= std_logic_vector(s_segmentA);
     
     --Output inner signals
     o_SPEED<=s_SPEED;

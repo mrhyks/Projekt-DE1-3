@@ -70,6 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_msg_config -id {Common 17-41} -limit 10000000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35ticsg324-1L
 
@@ -95,6 +96,8 @@ read_vhdl -library xil_defaultlib {
   C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/sources_1/new/distance.vhd
   C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/sources_1/new/calculations.vhd
   C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/sources_1/new/top.vhd
+  C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/sources_1/new/convert_to_4digit.vhd
+  C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/sources_1/new/hex7seg.vhd
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
