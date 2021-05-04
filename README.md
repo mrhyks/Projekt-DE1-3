@@ -1,5 +1,5 @@
 ﻿# Projekt-DE1 - 3. zadání
-## Konzole pro rotoped/kolo s LCD displejem
+## Konzole pro rotoped/kolo
 
 ### Členové týmu
 
