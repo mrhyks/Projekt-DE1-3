@@ -64,7 +64,7 @@ begin
         if(i_MODE="01")then
             if s_helper(0) = 'U' then
                 s_helper <= i_SPD;
-                s_D0 <="0000";
+                s_D0 <="0001";
                 s_D1 <="0000";
                 s_D2 <="0000";
                 s_D3 <="0000";
@@ -92,7 +92,7 @@ begin
          elsif(i_MODE="10")then
             if s_helper(0) = 'U' then
                 s_helper<=i_AVGS;
-                s_D0 <="0000";
+                s_D0 <="0001";
                 s_D1 <="0000";
                 s_D2 <="0000";
                 s_D3 <="0000";
@@ -120,7 +120,7 @@ begin
          elsif(i_MODE="11")then
             if s_helper(0) = 'U' then
                 s_helper<=i_DIST;
-                s_D0 <="0000";
+                s_D0 <="0001";
                 s_D1 <="0000";
                 s_D2 <="0000";
                 s_D3 <="0000";

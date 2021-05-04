@@ -9,7 +9,19 @@ vhdl xil_defaultlib  \
 "../../../../console.srcs/sources_1/new/distance.vhd" \
 "../../../../console.srcs/sources_1/new/calculations.vhd" \
 "../../../../console.srcs/sources_1/new/top.vhd" \
+"../../../../console.srcs/sources_1/new/convert_to_4digit.vhd" \
+"../../../../console.srcs/sources_1/new/hex7seg.vhd" \
 "../../../../console.srcs/sim_1/new/tb_top.vhd" \
+"../../../../console.srcs/sim_1/new/tb_mode.vhd" \
+"../../../../console.srcs/sim_1/new/tb_average.vhd" \
+"../../../../console.srcs/sim_1/new/tb_wheel.vhd" \
+"../../../../console.srcs/sim_1/new/tb_speed.vhd" \
+"../../../../console.srcs/sim_1/new/tb_reset.vhd" \
+"../../../../console.srcs/sim_1/new/tb_distance.vhd" \
+"../../../../console.srcs/sim_1/new/tb_buttons.vhd" \
+"../../../../console.srcs/sim_1/new/tb_calculations.vhd" \
+"../../../../console.srcs/sim_1/new/tb_convert_to_4digit.vhd" \
+"../../../../console.srcs/sim_1/new/tb_hex_7seg.vhd" \
 
 # Do not sort compile order
 nosort
