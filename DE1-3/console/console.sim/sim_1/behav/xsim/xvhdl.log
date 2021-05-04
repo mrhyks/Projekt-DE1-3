@@ -1,8 +1,4 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/sources_1/new/distance.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'distance'
-INFO: [VRFC 10-163] Analyzing VHDL file "D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/sources_1/new/calculations.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'calculations'
-INFO: [VRFC 10-163] Analyzing VHDL file "D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/sources_1/new/top.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'top'
-INFO: [VRFC 10-163] Analyzing VHDL file "D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/sim_1/new/tb_top.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'tb_top'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/sources_1/new/convert_to_4digit.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'convert_to_4digit'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/sim_1/new/tb_convert_to_4digit.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_convert_to_4digit'

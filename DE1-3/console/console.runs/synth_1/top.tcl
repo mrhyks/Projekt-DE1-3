@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.runs/synth_1/top.tcl"
+  variable script "C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.runs/synth_1/top.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,32 +70,31 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35ticsg324-1L
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.cache/wt [current_project]
-set_property parent.project_path D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.cache/wt [current_project]
+set_property parent.project_path C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part digilentinc.com:arty-a7-35:part0:1.0 [current_project]
-set_property ip_output_repo d:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.cache/ip [current_project]
+set_property ip_output_repo c:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_vhdl -library xil_defaultlib {
-  D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/sources_1/new/average.vhd
-  D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/sources_1/new/wheel.vhd
-  D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/sources_1/new/mode.vhd
-  D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/sources_1/new/reset.vhd
-  D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/sources_1/new/buttons.vhd
-  D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/sources_1/new/speed.vhd
-  D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/sources_1/new/distance.vhd
-  D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/sources_1/new/calculations.vhd
-  D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/sources_1/new/top.vhd
+  C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/sources_1/new/average.vhd
+  C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/sources_1/new/wheel.vhd
+  C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/sources_1/new/mode.vhd
+  C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/sources_1/new/reset.vhd
+  C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/sources_1/new/buttons.vhd
+  C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/sources_1/new/speed.vhd
+  C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/sources_1/new/distance.vhd
+  C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/sources_1/new/calculations.vhd
+  C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/sources_1/new/top.vhd
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -106,8 +105,8 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc
-set_property used_in_implementation false [get_files D:/Documents/xhruby28/Digital-electronics-1/Labs/Project/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc]
+read_xdc C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc
+set_property used_in_implementation false [get_files C:/Users/Test/Documents/mrhyks/Projekt-DE1-3/DE1-3/console/console.srcs/constrs_1/new/arty_a7_30.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
