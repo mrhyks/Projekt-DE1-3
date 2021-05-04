@@ -42,7 +42,7 @@ begin
         end if;
         
         if i_mode = "11" then
-            o_distance <= s_distance/100;                       --Return value in 1m if mode is "11" (3)
+            o_distance <= s_distance/1000;                       --Return value in 10m if mode is "11" (3)
             
         else 
             o_distance <= "00000000000000000000000000000000";   --Return value if mode isn't "11" (3)
