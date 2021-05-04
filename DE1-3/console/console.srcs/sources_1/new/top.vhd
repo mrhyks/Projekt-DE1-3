@@ -42,10 +42,14 @@ architecture Behavioral of top is
     signal DISTANCE  : unsigned(31 downto 0);       -- Internal distance signal
     
     -- For testing 7segs 
-    signal s_ja      : unsigned(3 downto 0);        -- Internal ja signal
-    signal s_jb      : unsigned(3 downto 0);        -- Internal jb signal
-    signal s_jc      : unsigned(3 downto 0);        -- Internal jc signal
-    signal s_jd      : unsigned(3 downto 0);        -- Internal jd signal
+    signal s_ja      : std_logic_vector(3 downto 0);        -- Internal ja signal
+    signal s_jb      : std_logic_vector(3 downto 0);        -- Internal jb signal
+    signal s_jc      : std_logic_vector(3 downto 0);        -- Internal jc signal
+    signal s_jd      : std_logic_vector(3 downto 0);        -- Internal jd signal
+    signal s_a       : unsigned(3 downto 0);
+    signal s_b       : unsigned(3 downto 0);
+    signal s_c       : unsigned(3 downto 0);
+    signal s_d       : unsigned(3 downto 0);
        
 begin    
     --------------------------------------------------------------------
@@ -89,24 +93,30 @@ begin
         i_SPD    => SPEED,
         i_AVGS   => AVG_SPEED,
         i_DIST   => DISTANCE,
-        o_D0     => s_jd,
-        o_D1     => s_jc,
-        o_D2     => s_jb,
-        o_D3     => s_ja
+        o_D0     => s_d,
+        o_D1     => s_c,
+        o_D2     => s_b,
+        o_D3     => s_a
     );
     
     --------------------------------------------------------------------
     -- Instance (copy) of hex7seg entity
---    hex_7seg : entity work.hex7seg
---    port map (
---        hex0_i => s_jd,
---        hex1_i => s_jc,
---        hex2_i => s_jb,
---        hex3_i => s_ja,
---        seg0_o => jd,
---        seg1_o => jc,
---        seg2_o => jb,
---        seg3_o => ja
---    );
+    hex_7seg : entity work.hex7seg
+    port map (
+        hex0_i => s_d,
+        hex1_i => s_c,
+        hex2_i => s_b,
+        hex3_i => s_a,
+        seg0_o => jd,
+        seg1_o => jc,
+        seg2_o => jb,
+        seg3_o => ja
+    );
+    
+    s_jd <= std_logic_vector(s_d);
+    s_jc <= std_logic_vector(s_c);
+    s_jb <= std_logic_vector(s_b);
+    s_ja <= std_logic_vector(s_a);
+    
     
 end Behavioral;
