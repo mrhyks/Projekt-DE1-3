@@ -172,7 +172,7 @@ V modulu `distance.vhd` se řeší ujetá vzdálenost, která je závyslá na zv
 
 ## Popis a simulace TOP modulu
 
-Modul `top.vhd` spojuje moduly `buttons.vhd` a `calculations.vhd`. Do modulu `buttons.vhd` přivádí signál z tlačítek a clk, do `calculations.vhd` mode, reset a wheel z modulu `buttons.vhd`. Dále je přiveden signál ze Hallovi sondy a clk. Z celého modulu pak jdou pryč signály z modulů distance, average a speed. Tyto signály jsou přivedeneny na piny, které by vedly do arduina, které by signál přeložilo z binárního kódu do ASCII a poslalo zpět do desky, kde by to bylo propojeno s piny JA a JB (Pmod piny) do LCD displeje. 
+Modul `top.vhd` spojuje moduly `buttons.vhd` a `calculations.vhd`. Do modulu `buttons.vhd` přivádí signál z tlačítek a clk, do `calculations.vhd` mode, reset a wheel z modulu `buttons.vhd`. Dále je přiveden signál ze Hallovi sondy a clk. Z celého modulu jdou pryč signály z modulů distance, average a speed. Tyto signály jsou přivedeneny na piny, které by vedly do arduina, které by signál přeložilo z binárního kódu do ASCII a poslalo zpět do desky, kde by to bylo propojeno s piny JA a JB (Pmod piny) do LCD displeje. 
 
 **Simulace modulu**
 - 0 - 10s
