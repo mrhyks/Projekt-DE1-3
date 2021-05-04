@@ -199,3 +199,4 @@ Modul `top.vhd` spojuje moduly `buttons.vhd` a `calculations.vhd`. Do modulu `bu
    1. [Arty A7 reference manual](https://reference.digilentinc.com/reference/programmable-logic/arty-a7/reference-manual)
    2. [Digilent Pmod Interface Specification](https://www.digilentinc.com/Pmods/Digilent-Pmod_%20Interface_Specification.pdf)
    3. [Pmod CLP Reference Manual](https://reference.digilentinc.com/reference/pmod/pmodclp/reference-manual)
+   4. [Pmod Hardware Compatibility Guide](https://reference.digilentinc.com/pmod/hardware_compatibility)
